@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồi đáp</title>
+</head>
+<style>
+    body{
+        padding-top: 4%;
+    }
+    p{
+        font-size: 30px;
+        margin-left: 40%;
+    }
+</style>
+<body>
+    <p class="food"></p>
+    <p class="play"></p>
+    <p class="yes-no"></p>
+    <p class="comment"></p>
+</body>
+<script>
+    var food = document.querySelector(".food");
+    var play = document.querySelector(".play");
+    var yesNo = document.querySelector(".yes-no");
+    var commentText = document.querySelector(".comment");
+
+    food.innerText = `Đồ ăn: ${localStorage.getItem("food") || "Không chọn"}`;
+    play.innerText = `đi chơi: ${localStorage.getItem("play") || "Không chọn"}`;
+    yesNo.innerText = `Có hay không: ${localStorage.getItem("select") || "Không chọn"}`;
+
+    commentText.innerText = `Comment: ${localStorage.getItem("comment") || "Không nhận xét gì"}`;
+</script>
+</html>

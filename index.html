@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hí lu Khuất Thu Huỳn :3</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="heading">Plan for tối thứ 5</h1>
+    <form id="planForm">
+        <div class="group">
+            <p class="question">question 1: Tối thứ 5 Huỳn muốn ăn gì nhỉ?</p>
+            <div class="answer-group">
+                <div>
+                    <input type="radio" name="food" id="food_korean" value="Ăn đồ Hàn"><span>Ăn đồ Hàn</span>
+                </div>
+                <div>
+                    <input type="radio" name="food" id="food_grill" value="Ăn nướng"><span>Ăn nướng</span>
+                </div>
+            </div>
+            <p class="question">question 2: Ăn xong muốn đi đâuuu</p>
+            <div class="answer-group">
+                <div>
+                    <input type="radio" name="play" id="play_billiards" value="Bắn bi a"><span>Bắn bi a</span>
+                </div>
+                <div>
+                    <input type="radio" name="play" id="play_movie" value="Xem phim"><span>Xem phim</span>
+                </div>
+            </div>
+            <p class="question">question 3: Hay có muốn lên Hồ Tây khum:3</p>
+            <div class="answer-group">
+                <div>
+                    <input type="radio" name="select" id="select_yes" value="Có"><span>Có</span>
+                </div>
+                <div>
+                    <input type="radio" name="select" id="select_no" value="Không"><span>Không</span>
+                </div>
+            </div>
+            <input type="text" placeholder="Xin 1 vài comment để làm tốt hơn cho lần sau..." class="comment" id="comment">
+            <div class="button">
+                <button type="button" onclick="submitForm()">Gửi nè</button>
+                <button type="button" onclick="submitComment()">Gửi đánh giá cho tui</button>
+            </div>
+        </div>
+    </form>
+</body>
+<script>
+    localStorage.removeItem("food");
+    localStorage.removeItem("play");
+    localStorage.removeItem("select");
+</script>
+<script src="./app.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</html>
